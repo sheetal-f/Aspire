@@ -65,7 +65,7 @@ public class ProductPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void createProduct(String name, String producttype, String salep, String c, String intref, String barc)
+	public void createProduct(String name, String producttype, String intref, String barc)
 			throws Exception {
 
 		Thread.sleep(4000);
@@ -82,21 +82,7 @@ public class ProductPage extends TestBase {
 		prodtype.selectByVisibleText(producttype);
 
 		Thread.sleep(4000);
-		// salesprice
-
-		String js = "arguments[0].setAttribute('value','" + salep + "')";
-		((JavascriptExecutor) driver).executeScript(js, salesprice);
-
-		// salesprice.sendKeys(salep);
-
-		Thread.sleep(4000);
-		// cost
-		// cost.clear();
-		// cost.sendKeys(c);
-		String js1 = "arguments[0].setAttribute('value','" + c + "')";
-		((JavascriptExecutor) driver).executeScript(js1, cost);
-
-		Thread.sleep(4000);
+		
 		// internal reference
 		internalref.sendKeys(intref);
 

@@ -40,12 +40,12 @@ public class ProductPageTest extends TestBase {
 	}
 
 	@Test(priority = 1, dataProvider = "getData", description="product added successfully")
-	public void verifyCreateProduct(String name, String producttype, String salep, String c, String intref, String barc)
+	public void verifyCreateProduct(String name, String producttype,String intref, String barc)
 			throws Exception {
 
 		// productpage.createProduct("testsheetu17-22","","2","10","testingpurpose28","6789","testing
 		// purpose only");
-		productpage.createProduct(name, producttype, salep, c, intref, barc);
+		productpage.createProduct(name, producttype,intref, barc);
 		productpage.updateQuantity("20");
 		productpage.replenish("20");
 	}
