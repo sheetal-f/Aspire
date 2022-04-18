@@ -1,6 +1,8 @@
 package testPage;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import base.TestBase;
 import pageObjects.InventoryPage;
@@ -14,7 +16,7 @@ public class InventoryPageTest extends TestBase{
 	public InventoryPageTest() {
 		super();
 	}
-	
+	@BeforeMethod
 	public void setUp() throws Exception {
 		initializeBrowser();
 		inventorypage = new InventoryPage();
@@ -22,11 +24,13 @@ public class InventoryPageTest extends TestBase{
 		login.aspireLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
+	@Test(priority=1,description="redirect to product page successfully")
 	public void verifyProductdd() throws Exception {
 		inventorypage.clickOnProductdd();
 		
 	}
 	
+	@Test(priority=2,description="redirect to manufactor page successfully")
 	public void verifyManufactPage() throws Exception {
 		inventorypage.redirectManufactPage();
 	}

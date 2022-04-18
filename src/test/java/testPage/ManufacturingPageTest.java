@@ -27,7 +27,7 @@ public class ManufacturingPageTest extends TestBase{
 		inventorypage.redirectManufactPage();
 	}
 	
-	@Test
+	@Test(description= "manufacturing order successfully")
 	public void verifycreatemanufact() throws Exception {
 		manufacpage.createmanufacture("test-18-22");
 	}

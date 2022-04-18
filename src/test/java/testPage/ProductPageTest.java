@@ -39,7 +39,7 @@ public class ProductPageTest extends TestBase {
 		return data;
 	}
 
-	@Test(priority = 1, dataProvider = "getData")
+	@Test(priority = 1, dataProvider = "getData", description="product added successfully")
 	public void verifyCreateProduct(String name, String producttype, String salep, String c, String intref, String barc)
 			throws Exception {
 
